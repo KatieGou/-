@@ -15,3 +15,16 @@ class Solution:
             prev=cur
             cur=original_next
         return prev
+
+    
+# 反转双向链表：
+def ReverseList(self, pHead):
+    prev=None
+    cur=pHead
+    while cur:
+        original_next=cur.next
+        cur.next=prev
+        cur.previous=original_next # 多的一行
+        prev=cur
+        cur=original_next
+    return prev
